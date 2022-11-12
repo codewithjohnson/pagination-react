@@ -1,0 +1,24 @@
+/* ERROR PAGE STYLING */
+.errorPage {
+  margin: 10rem auto;
+  padding: 0.9rem 1.2rem;
+  width: 60%;
+  background: linear-gradient(90deg, darkcyan, black);
+  color: white;
+}
+
+.errorTitle {
+  margin-bottom: 1.5rem;
+}
+
+.errorNote {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+}
+
+.backToSite {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: 500;
+  text-underline-offset: 0.1rem;
+}

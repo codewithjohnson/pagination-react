@@ -1,0 +1,60 @@
+.PaginateduserContainer {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, minmax(200px, auto));
+  align-items: flex-start;
+}
+
+.paginateUsers {
+  background: white;
+  border: 1px solid rgba(128, 128, 128, 0.267);
+  border-radius: 8px;
+  padding: 20px;
+}
+.paginateUsers:hover {
+  box-shadow: 2px 4px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.pageNoBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomPageNo {
+  padding-top: 1rem;
+}
+
+.btns {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btns button {
+  cursor: pointer;
+  padding: 5px 20px;
+  outline: none;
+}
+
+.prevBtn,
+.nextBtn {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .PaginateduserContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .PaginateduserContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

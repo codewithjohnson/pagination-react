@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+.userImage {
+  grid-area: userProfileImage;
+}
+
+.userImage {
+  display: flex;
+  width: min-content;
+}
+.userImage img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.profile {
+  grid-area: userProfile;
+}
+
+.agePostCodePhoneNo {
+  grid-area: userAgePostCodePhoneNo;
+}
+
+.userCard {
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  grid-template-areas:
+    "userProfileImage userProfile userProfile"
+    "... userAgePostCodePhoneNo userAgePostCodePhoneNo";
+}
+
+/* STYLING PROFILE CONTAINER AS GRID */
+.name {
+  grid-area: name;
+}
+.name {
+  font-weight: 500;
+  text-decoration: capitalize;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.country {
+  grid-area: country;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+.userName {
+  grid-area: userName;
+  color: #0079ff;
+  font-size:12px;
+}
+
+.profile {
+  font-size: 0.9rem;
+  display: grid;
+  grid-template-areas:
+    "name country country"
+    "userName ... ... ";
+}
+
+.agePostCodePhoneNo {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.ageTitle,
+.postalCodeTitle,
+.phoneNumberTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.age,
+.postalCode,
+.phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.589);
+}
+
+@media screen and (max-width: 600px) {
+  .userCard {
+    grid-template-areas:
+      "userProfileImage userProfile userProfile"
+      "userAgePostCodePhoneNo userAgePostCodePhoneNo userAgePostCodePhoneNo";
+  }
+  .userImage img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .country {
+    font-size: 0.8rem;
+  }
+}

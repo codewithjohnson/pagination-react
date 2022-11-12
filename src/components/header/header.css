@@ -1,0 +1,122 @@
+:root {
+  --headerTextColor: rgba(255, 255, 255, 0.548);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  background: transparent;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  list-style-type: none;
+}
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand a {
+  text-decoration: none;
+  padding: 20px 0px;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.logo {
+  font-size: 24px;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.navBar a {
+  color: var(--headerTextColor);
+  text-decoration: none;
+  padding: 20px 0px;
+}
+
+.navBar a:hover {
+  color: white;
+}
+
+#menuBar {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 21px;
+  }
+  #menuBar {
+    display: flex;
+  }
+
+  nav .navBar {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #242424;
+    gap: 10px;
+  }
+
+  .navBar li {
+    width: 100%;
+  }
+
+  .navBar li a {
+    display: block;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.253);
+    color: var(--headerTextColor);
+    padding: 0;
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+  .navBar li a:hover {
+    background: gray;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .navActive {
+    display: flex;
+  }
+}
